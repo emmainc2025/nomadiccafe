@@ -4997,7 +4997,7 @@ button.bg-light:focus {
   background-color: #dae0e5 !important; }
 
 .bg-dark {
-  background-color: #343a40 !important; }
+  background: #120f0f !important; }
 
 a.bg-dark:hover, a.bg-dark:focus,
 button.bg-dark:hover,
@@ -7306,13 +7306,12 @@ h1, h2, h3, h4, h5,
   color: #547265 !important; }
 
 .ftco-navbar-light {
-  background: transparent !important;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index: 3;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+}
   @media (max-width: 991.98px) {
     .ftco-navbar-light {
       background: #000 !important;
@@ -7445,7 +7444,6 @@ h1, h2, h3, h4, h5,
     left: 0;
     top: 0;
     margin-top: -130px;
-    background: #151111 !important;
     -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     border: none; }
