@@ -7803,11 +7803,14 @@ h1, h2, h3, h4, h5,
   padding: 30px 15px; }
   @media (min-width: 768px) {
     .ftco-about .one-half {
-      padding: 8% 13% 8% 5%;
+      padding: 8% 10% 8% 5%;
       width: 50%; } }
   .ftco-about .one-half.img {
     display: block;
     opacity: 0.7;
+    width: 25%;
+    margin: 6% 0 6% 12%;
+    background-position: top;
   }
     @media (max-width: 767.98px) {
       .ftco-about .one-half.img {
@@ -7830,7 +7833,7 @@ h1, h2, h3, h4, h5,
   margin: 0 auto;
   position: relative;
   z-index: 0;
-  bordeR: 1px solid #674c27; }
+  bordeR: 2px solid #674c27; }
   .services .icon span {
     font-size: 60px;
     color: #1d150b;
@@ -8476,7 +8479,11 @@ textarea.form-control {
 
 .ftco-animate {
   opacity: 0;
-  visibility: hidden; }
+  visibility: hidden;
+  img {
+    height: 50px;
+  }
+}
 
 .bg-primary {
   background: #547265 !important; }
