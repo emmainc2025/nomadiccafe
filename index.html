@@ -1,134 +1,600 @@
-<!-- ============================================ -->
-<!--                 Navigation                   -->
-<!-- ============================================ -->
-<link rel="stylesheet" href="styles/navigation.css">
-<link rel="stylesheet" href="styles/application.css">
-<link rel="stylesheet" href="styles/hero.css">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Coffee - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<body>
-    <header id="cs-navigation">
-        <div class="cs-container">
-            <!--Nav Logo-->
-            <a href="" class="cs-logo" aria-label="back to home">
-                <img src="shared/1.png" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
-            </a>
-            <!--Navigation List-->
-            <nav class="cs-nav" role="navigation">
-                <!--Mobile Nav Toggle-->
-                <button class="cs-toggle" aria-label="mobile menu toggle">
-                    <div class="cs-box" aria-hidden="true">
-                        <span class="cs-line cs-line1" aria-hidden="true"></span>
-                        <span class="cs-line cs-line2" aria-hidden="true"></span>
-                        <span class="cs-line cs-line3" aria-hidden="true"></span>
-                    </div>
-                </button>
-                <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
-                <div class="cs-ul-wrapper">
-                    <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
-                        <li class="cs-li">
-                            <a href="" class="cs-li-link cs-active">
-                                Home
-                            </a>
-                        </li>
-                        <li class="cs-li">
-                            <a href="" class="cs-li-link">
-                                Location
-                            </a>
-                        </li>
-                        <li class="cs-li">
-                            <a href="" class="cs-li-link">
-                                Services
-                            </a>
-                        </li>
-                        <li class="cs-li">
-                            <a href="" class="cs-li-link">
-                                About Us
-                            </a>
-                        </li>
-                        <li class="cs-li">
-                            <a href="" class="cs-li-link">
-                                FAQ
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <a href="" class="cs-button-solid cs-nav-button">Contact Us</a>
-            <!--Dark Mode toggle-->
-            <!-- Place at the bottom of your container that wraps around your <nav> navigation list -->
-            <!-- If there is no container wrapping your <nav>, add one.  This should NOT be placed inside the navigation list -->
-            <button id="dark-mode-toggle">
-                <!--Moon is an inline SVG so you can edit the color if needed-->
-                <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
-                <img class="cs-sun" aria-hidden="true" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/sun.svg" decoding="async" alt="sun" width="15" height="15">
-            </button>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+  	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">
+			  <img src="shared/1.png" alt="logo" width="100" height="auto" aria-hidden="true" decoding="async">
+		  </a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+	          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+<!--	          <li class="nav-item dropdown">-->
+<!--              <a class="nav-link dropdown-toggle" href="room.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>-->
+<!--              <div class="dropdown-menu" aria-labelledby="dropdown04">-->
+<!--              	<a class="dropdown-item" href="shop.html">Shop</a>-->
+<!--                <a class="dropdown-item" href="product-single.html">Single Product</a>-->
+<!--                <a class="dropdown-item" href="room.html">Cart</a>-->
+<!--                <a class="dropdown-item" href="checkout.html">Checkout</a>-->
+<!--              </div>-->
+<!--            	</li>-->
+	          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+	        </ul>
+	      </div>
+		  </div>
+	  </nav>
+    <!-- END nav -->
+
+    <section class="home-slider owl-carousel">
+      <div class="slider-item" style="background-image: url(shared/bike_riding.JPG);">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+            <div class="col-md-8 col-sm-12 text-center ftco-animate">
+            	<span class="subheading">Welcome</span>
+              <h1 class="mb-4">The Best Coffee Testing Experience</h1>
+              <p class="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+              <p><a href="#contact" class="btn btn-primary p-3 px-xl-4 py-xl-3">Contact Us</a> <a href="services.html" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Services</a></p>
+            </div>
+
+          </div>
         </div>
-    </header>
+      </div>
 
-    <!-- ============================================ -->
-    <!--                     Hero                     -->
-    <!-- ============================================ -->
+      <div class="slider-item" style="background-image: url(shared/bike_event.JPG);">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
-    <section>
-        <section id="hero-1946">
-            <div class="cs-container">
-                <div class="cs-content">
-                    <h2 class="cs-title">Come visit us in person! Location updated daily.</h2>
-                    <div class="cs-flex">
-                        <p class="cs-text">We're always on the move, but you can usually find Nomadic Café in Stražilevo or in the Sremski Karlovci square.</p>
-                        <a href="" class="cs-button-solid">Learn More</a>
+            <div class="col-md-8 col-sm-12 text-center ftco-animate">
+            	<span class="subheading">Welcome</span>
+              <h1 class="mb-4">Amazing Taste &amp; Beautiful Place</h1>
+              <p class="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+              <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Contact Us</a> <a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Services</a></p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-item" style="background-image: url(shared/coffeebike.jpeg);">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+            <div class="col-md-8 col-sm-12 text-center ftco-animate">
+            	<span class="subheading">Welcome</span>
+              <h1 class="mb-4">Creamy Hot and Ready to Serve</h1>
+              <p class="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+              <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Contact Us</a> <a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Services</a></p>
+			</div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-about d-md-flex" id="about">
+      <div class="one-half img" style="background-image: url(shared/rade_close.JPG);"></div>
+      <div class="one-half ftco-animate">
+    	<div class="overlap">
+	      <div class="heading-section ftco-animate ">
+	       	<span class="subheading">Discover</span>
+	        <h2 class="mb-4">Our Story</h2>
+	      </div>
+	      <div>
+	  		<p>In today’s fast-paced life, we believe people deserve a moment to slow down and truly enjoy
+               the taste of a well-made cup of coffee. Our coffee bike was created to bring that pause — a
+               small break from the rush — where quality and flavor come first. That is how our idea to start
+               this small business was created
+            </p>
+            <p>
+              For us, coffee is not just a drink. It’s a moment of calm, connection, and enjoyment, served
+              wherever people gather.
+            </p>
+	  	  </div>
+  		</div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 ftco-animate">
+                    <div class="media d-block text-center block-6 services">
+                        <div class="icon d-flex justify-content-center align-items-center mb-5">
+                            <img src="shared/party.svg">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="heading">Private Events</h3>
+                            <p>Mobile coffee catering for private events, parties, and celebrations, serving specialty coffee
+                                anywhere.
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div class="cs-picture-container">
-                    <img class="cs-picture" src="shared/coffeebike.jpeg" alt="coffee bicycle" style="width: 40%; height: auto; margin-right: 50px;">
-                    <iframe class="cs-picture" src="https://maps.google.com/maps?q=45.202899, 19.933983&z=15&output=embed" style="border:0; height: auto;"></iframe>
+                <div class="col-md-4 ftco-animate">
+                    <div class="media d-block text-center block-6 services">
+                        <div class="icon d-flex justify-content-center align-items-center mb-5">
+                            <img src="shared/heart.svg">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="heading">Weddings</h3>
+                            <p>Wedding coffee catering with a stylish coffee bike, offering premium espresso drinks for guests.</p>
+                        </div>
+                    </div>
                 </div>
-                <ul class="cs-card-group">
-                    <li class="cs-item">
-                        <picture class="cs-icon-picture">
-                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/tool.svg" decoding="async" alt="icon" width="40" height="40" aria-hidden="true">
-                        </picture>
-                        <!-- Text Grouped For Flexbox-->
-                        <div class="cs-text-group">
-                            <h3 class="cs-h3">Construction</h3>
-                            <p class="cs-item-text">Designing and Building The Most Beautiful Custom Homes.</p>
+                <div class="col-md-4 ftco-animate">
+                    <div class="media d-block text-center block-6 services">
+                        <div class="icon d-flex justify-content-center align-items-center mb-5">
+                            <img src="shared/sun.svg">
                         </div>
-                    </li>
-                    <li class="cs-item">
-                        <picture class="cs-icon-picture">
-                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/hard-hat.svg" decoding="async" alt="icon" width="40" height="40" aria-hidden="true">
-                        </picture>
-                        <!-- Text Grouped For Flexbox-->
-                        <div class="cs-text-group">
-                            <h3 class="cs-h3">Project Development</h3>
-                            <p class="cs-item-text">Designing and Building The Most Beautiful Custom Homes.</p>
+                        <div class="media-body">
+                            <h3 class="heading">Festivals and Markets</h3>
+                            <p>Coffee bike service for festivals and markets, delivering fast, high-quality specialty coffee.</p>
                         </div>
-                    </li>
-                    <li class="cs-item">
-                        <picture class="cs-icon-picture">
-                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/double-bed.svg" decoding="async" alt="icon" width="40" height="40" aria-hidden="true">
-                        </picture>
-                        <!-- Text Grouped For Flexbox-->
-                        <div class="cs-text-group">
-                            <h3 class="cs-h3">Interior Design</h3>
-                            <p class="cs-item-text">Designing and Building The Most Beautiful Custom Homes.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 ftco-animate">
+                    <div class="media d-block text-center block-6 services">
+                        <div class="icon d-flex justify-content-center align-items-center mb-5">
+                            <img src="shared/globe.svg">
                         </div>
-                    </li>
-                    <li class="cs-item">
-                        <picture class="cs-icon-picture">
-                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/building.svg" decoding="async" alt="icon" width="40" height="40" aria-hidden="true">
-                        </picture>
-                        <!-- Text Grouped For Flexbox-->
-                        <div class="cs-text-group">
-                            <h3 class="cs-h3">Architecture</h3>
-                            <p class="cs-item-text">Designing and Building The Most Beautiful Custom Homes.</p>
+                        <div class="media-body">
+                            <h3 class="heading">Corporate</h3>
+                            <p>Corporate coffee catering with a mobile coffee bar for meetings, launches, and company
+                                events.
+                            </p>
                         </div>
-                    </li>
-                </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 ftco-animate">
+                    <div class="media d-block text-center block-6 services">
+                        <div class="icon d-flex justify-content-center align-items-center mb-5">
+                            <img src="shared/structure.svg">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="heading">Team Buildings</h3>
+                            <p>Coffee catering for team building events, creating relaxed moments with great coffee.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 ftco-animate">
+                    <div class="media d-block text-center block-6 services">
+                        <div class="icon d-flex justify-content-center align-items-center mb-5">
+                            <img src="shared/rocket.svg">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="heading">Brand Activities and Pop-Ups</h3>
+                            <p>
+                              Mobile coffee bike for brand activations and pop-ups, combining specialty coffee with visual impact to attract and engage customers.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section">
+    	<div class="container">
+    		<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate text-center">
+          	<span class="subheading">Discover</span>
+            <h2 class="mb-4">Our Past Events</h2>
+          </div>
+        </div>
+        <div class="row">
+        	<div class="col-md-4">
+        		<div class="menu-entry">
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DRcONOcDDDM/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/DRcONOcDDDM/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DRcONOcDDDM/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by nvkvch (@novkovich.photo)</a></p></div></blockquote>
+                    <script async src="//www.instagram.com/embed.js"></script>
+    			</div>
+        	</div>
+        	<div class="col-md-4">
+        		<div class="menu-entry">
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DO3KATejUPD/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/DO3KATejUPD/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DO3KATejUPD/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Piknik (@piknikbg)</a></p></div></blockquote>
+                    <script async src="//www.instagram.com/embed.js"></script>
+    			</div>
+        	</div>
+        	<div class="col-md-4">
+        		<div class="menu-entry">
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DOk0cvbDEGJ/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/DOk0cvbDEGJ/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DOk0cvbDEGJ/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Maja Samardžija | Kids photographer (@maja.samardzija_photographer)</a></p></div></blockquote>
+                    <script async src="//www.instagram.com/embed.js"></script>
+    			</div>
+        	</div>
+            <div class="col-md-4">
+                <div class="menu-entry">
+                </div>
+            </div>
+        </div>
+    	</div>
+    </section>
+
+<!--    <section class="ftco-gallery">-->
+<!--    	<div class="container-wrap">-->
+<!--    		<div class="row no-gutters">-->
+<!--					<div class="col-md-3 ftco-animate">-->
+<!--						<a href="gallery.html" class="gallery img d-flex align-items-center" style="background-image: url(images/gallery-1.jpg);">-->
+<!--							<div class="icon mb-4 d-flex align-items-center justify-content-center">-->
+<!--    						<span class="icon-search"></span>-->
+<!--    					</div>-->
+<!--						</a>-->
+<!--					</div>-->
+<!--					<div class="col-md-3 ftco-animate">-->
+<!--						<a href="gallery.html" class="gallery img d-flex align-items-center" style="background-image: url(images/gallery-2.jpg);">-->
+<!--							<div class="icon mb-4 d-flex align-items-center justify-content-center">-->
+<!--    						<span class="icon-search"></span>-->
+<!--    					</div>-->
+<!--						</a>-->
+<!--					</div>-->
+<!--					<div class="col-md-3 ftco-animate">-->
+<!--						<a href="gallery.html" class="gallery img d-flex align-items-center" style="background-image: url(images/gallery-3.jpg);">-->
+<!--							<div class="icon mb-4 d-flex align-items-center justify-content-center">-->
+<!--    						<span class="icon-search"></span>-->
+<!--    					</div>-->
+<!--						</a>-->
+<!--					</div>-->
+<!--					<div class="col-md-3 ftco-animate">-->
+<!--						<a href="gallery.html" class="gallery img d-flex align-items-center" style="background-image: url(images/gallery-4.jpg);">-->
+<!--							<div class="icon mb-4 d-flex align-items-center justify-content-center">-->
+<!--    						<span class="icon-search"></span>-->
+<!--    					</div>-->
+<!--						</a>-->
+<!--					</div>-->
+<!--        </div>-->
+<!--    	</div>-->
+<!--    </section>-->
+
+<!--	<section class="ftco-menu">-->
+<!--    	<div class="container">-->
+<!--    		<div class="row justify-content-center mb-5">-->
+<!--          <div class="col-md-7 heading-section text-center ftco-animate">-->
+<!--          	<span class="subheading">Discover</span>-->
+<!--            <h2 class="mb-4">Our Products</h2>-->
+<!--            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--    		<div class="row d-md-flex">-->
+<!--	    		<div class="col-lg-12 ftco-animate p-md-5">-->
+<!--		    		<div class="row">-->
+<!--		          <div class="col-md-12 nav-link-wrap mb-5">-->
+<!--		            <div class="nav ftco-animate nav-pills justify-content-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">-->
+<!--		              <a class="nav-link active" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Main Dish</a>-->
+
+<!--		              <a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Drinks</a>-->
+
+<!--		              <a class="nav-link" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">Desserts</a>-->
+<!--		            </div>-->
+<!--		          </div>-->
+<!--		          <div class="col-md-12 d-flex align-items-center">-->
+
+<!--		            <div class="tab-content ftco-animate" id="v-pills-tabContent">-->
+
+<!--		              <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-1-tab">-->
+<!--		              	<div class="row">-->
+<!--		              		<div class="col-md-4 text-center">-->
+<!--		              			<div class="menu-wrap">-->
+<!--		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/dish-1.jpg);"></a>-->
+<!--		              				<div class="text">-->
+<!--		              					<h3><a href="#">Grilled Beef</a></h3>-->
+<!--		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>-->
+<!--		              					<p class="price"><span>$2.90</span></p>-->
+<!--		              					<p><a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a></p>-->
+<!--		              				</div>-->
+<!--		              			</div>-->
+<!--		              		</div>-->
+<!--		              		<div class="col-md-4 text-center">-->
+<!--		              			<div class="menu-wrap">-->
+<!--		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/dish-2.jpg);"></a>-->
+<!--		              				<div class="text">-->
+<!--		              					<h3><a href="#">Grilled Beef</a></h3>-->
+<!--		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>-->
+<!--		              					<p class="price"><span>$2.90</span></p>-->
+<!--		              					<p><a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a></p>-->
+<!--		              				</div>-->
+<!--		              			</div>-->
+<!--		              		</div>-->
+<!--		              		<div class="col-md-4 text-center">-->
+<!--		              			<div class="menu-wrap">-->
+<!--		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/dish-3.jpg);"></a>-->
+<!--		              				<div class="text">-->
+<!--		              					<h3><a href="#">Grilled Beef</a></h3>-->
+<!--		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>-->
+<!--		              					<p class="price"><span>$2.90</span></p>-->
+<!--		              					<p><a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a></p>-->
+<!--		              				</div>-->
+<!--		              			</div>-->
+<!--		              		</div>-->
+<!--		              	</div>-->
+<!--		              </div>-->
+
+<!--		              <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-2-tab">-->
+<!--		                <div class="row">-->
+<!--		              		<div class="col-md-4 text-center">-->
+<!--		              			<div class="menu-wrap">-->
+<!--		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/drink-1.jpg);"></a>-->
+<!--		              				<div class="text">-->
+<!--		              					<h3><a href="#">Lemonade Juice</a></h3>-->
+<!--		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>-->
+<!--		              					<p class="price"><span>$2.90</span></p>-->
+<!--		              					<p><a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a></p>-->
+<!--		              				</div>-->
+<!--		              			</div>-->
+<!--		              		</div>-->
+<!--		              		<div class="col-md-4 text-center">-->
+<!--		              			<div class="menu-wrap">-->
+<!--		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/drink-2.jpg);"></a>-->
+<!--		              				<div class="text">-->
+<!--		              					<h3><a href="#">Pineapple Juice</a></h3>-->
+<!--		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>-->
+<!--		              					<p class="price"><span>$2.90</span></p>-->
+<!--		              					<p><a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a></p>-->
+<!--		              				</div>-->
+<!--		              			</div>-->
+<!--		              		</div>-->
+<!--		              		<div class="col-md-4 text-center">-->
+<!--		              			<div class="menu-wrap">-->
+<!--		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/drink-3.jpg);"></a>-->
+<!--		              				<div class="text">-->
+<!--		              					<h3><a href="#">Soda Drinks</a></h3>-->
+<!--		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>-->
+<!--		              					<p class="price"><span>$2.90</span></p>-->
+<!--		              					<p><a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a></p>-->
+<!--		              				</div>-->
+<!--		              			</div>-->
+<!--		              		</div>-->
+<!--		              	</div>-->
+<!--		              </div>-->
+
+<!--		              <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-3-tab">-->
+<!--		                <div class="row">-->
+<!--		              		<div class="col-md-4 text-center">-->
+<!--		              			<div class="menu-wrap">-->
+<!--		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/dessert-1.jpg);"></a>-->
+<!--		              				<div class="text">-->
+<!--		              					<h3><a href="#">Hot Cake Honey</a></h3>-->
+<!--		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>-->
+<!--		              					<p class="price"><span>$2.90</span></p>-->
+<!--		              					<p><a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a></p>-->
+<!--		              				</div>-->
+<!--		              			</div>-->
+<!--		              		</div>-->
+<!--		              		<div class="col-md-4 text-center">-->
+<!--		              			<div class="menu-wrap">-->
+<!--		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/dessert-2.jpg);"></a>-->
+<!--		              				<div class="text">-->
+<!--		              					<h3><a href="#">Hot Cake Honey</a></h3>-->
+<!--		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>-->
+<!--		              					<p class="price"><span>$2.90</span></p>-->
+<!--		              					<p><a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a></p>-->
+<!--		              				</div>-->
+<!--		              			</div>-->
+<!--		              		</div>-->
+<!--		              		<div class="col-md-4 text-center">-->
+<!--		              			<div class="menu-wrap">-->
+<!--		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/dessert-3.jpg);"></a>-->
+<!--		              				<div class="text">-->
+<!--		              					<h3><a href="#">Hot Cake Honey</a></h3>-->
+<!--		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>-->
+<!--		              					<p class="price"><span>$2.90</span></p>-->
+<!--		              					<p><a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a></p>-->
+<!--		              				</div>-->
+<!--		              			</div>-->
+<!--		              		</div>-->
+<!--		              	</div>-->
+<!--		              </div>-->
+<!--		            </div>-->
+<!--		          </div>-->
+<!--		        </div>-->
+<!--		      </div>-->
+<!--		    </div>-->
+<!--    	</div>-->
+<!--    </section>-->
+
+<!--    <section class="ftco-section img" id="ftco-testimony" style="background-image: url(images/bg_1.jpg);"  data-stellar-background-ratio="0.5">-->
+<!--    	<div class="overlay"></div>-->
+<!--	    <div class="container">-->
+<!--	      <div class="row justify-content-center mb-5">-->
+<!--	        <div class="col-md-7 heading-section text-center ftco-animate">-->
+<!--	        	<span class="subheading">Testimony</span>-->
+<!--	          <h2 class="mb-4">Customers Says</h2>-->
+<!--	          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>-->
+<!--	        </div>-->
+<!--	      </div>-->
+<!--	    </div>-->
+<!--	    <div class="container-wrap">-->
+<!--	      <div class="row d-flex no-gutters">-->
+<!--	        <div class="col-lg align-self-sm-end ftco-animate">-->
+<!--	          <div class="testimony">-->
+<!--	             <blockquote>-->
+<!--	                <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small.&rdquo;</p>-->
+<!--	              </blockquote>-->
+<!--	              <div class="author d-flex mt-4">-->
+<!--	                <div class="image mr-3 align-self-center">-->
+<!--	                  <img src="images/person_1.jpg" alt="">-->
+<!--	                </div>-->
+<!--	                <div class="name align-self-center">Louise Kelly <span class="position">Illustrator Designer</span></div>-->
+<!--	              </div>-->
+<!--	          </div>-->
+<!--	        </div>-->
+<!--	        <div class="col-lg align-self-sm-end">-->
+<!--	          <div class="testimony overlay">-->
+<!--	             <blockquote>-->
+<!--	                <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.&rdquo;</p>-->
+<!--	              </blockquote>-->
+<!--	              <div class="author d-flex mt-4">-->
+<!--	                <div class="image mr-3 align-self-center">-->
+<!--	                  <img src="images/person_2.jpg" alt="">-->
+<!--	                </div>-->
+<!--	                <div class="name align-self-center">Louise Kelly <span class="position">Illustrator Designer</span></div>-->
+<!--	              </div>-->
+<!--	          </div>-->
+<!--	        </div>-->
+<!--	        <div class="col-lg align-self-sm-end ftco-animate">-->
+<!--	          <div class="testimony">-->
+<!--	             <blockquote>-->
+<!--	                <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small  line of blind text by the name. &rdquo;</p>-->
+<!--	              </blockquote>-->
+<!--	              <div class="author d-flex mt-4">-->
+<!--	                <div class="image mr-3 align-self-center">-->
+<!--	                  <img src="images/person_3.jpg" alt="">-->
+<!--	                </div>-->
+<!--	                <div class="name align-self-center">Louise Kelly <span class="position">Illustrator Designer</span></div>-->
+<!--	              </div>-->
+<!--	          </div>-->
+<!--	        </div>-->
+<!--	        <div class="col-lg align-self-sm-end">-->
+<!--	          <div class="testimony overlay">-->
+<!--	             <blockquote>-->
+<!--	                <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however.&rdquo;</p>-->
+<!--	              </blockquote>-->
+<!--	              <div class="author d-flex mt-4">-->
+<!--	                <div class="image mr-3 align-self-center">-->
+<!--	                  <img src="images/person_2.jpg" alt="">-->
+<!--	                </div>-->
+<!--	                <div class="name align-self-center">Louise Kelly <span class="position">Illustrator Designer</span></div>-->
+<!--	              </div>-->
+<!--	          </div>-->
+<!--	        </div>-->
+<!--	        <div class="col-lg align-self-sm-end ftco-animate">-->
+<!--	          <div class="testimony">-->
+<!--	            <blockquote>-->
+<!--	              <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small  line of blind text by the name. &rdquo;</p>-->
+<!--	            </blockquote>-->
+<!--	            <div class="author d-flex mt-4">-->
+<!--	              <div class="image mr-3 align-self-center">-->
+<!--	                <img src="images/person_3.jpg" alt="">-->
+<!--	              </div>-->
+<!--	              <div class="name align-self-center">Louise Kelly <span class="position">Illustrator Designer</span></div>-->
+<!--	            </div>-->
+<!--	          </div>-->
+<!--	        </div>-->
+<!--	      </div>-->
+<!--	    </div>-->
+<!--	  </section>-->
+
+		<section class="ftco-appointment" id="contact">
+			<div class="overlay"></div>
+            <div class="container-wrap">
+                <div class="row no-gutters d-md-flex align-items-center">
+                    <div class="col-md-6 d-flex align-self-stretch">
+                        <div id="map">
+                            <iframe class="cs-picture" src="https://maps.google.com/maps?q=45.202899, 19.933983&z=15&output=embed" style="border:0; width: 100%; height: 100%;"></iframe>
+                        </div>
+                    </div>
+                    <div class="col-md-6 appointment ftco-animate">
+                        <h3 class="mb-3">Contact Us</h3>
+                        <form action="#" class="appointment-form">
+                            <div class="d-md-flex">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="First Name">
+                                </div>
+                                <div class="form-group ml-md-4">
+                                    <input type="text" class="form-control" placeholder="Last Name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="" id="" cols="30" rows="4" class="form-control" placeholder="Message"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Send" class="btn btn-primary py-3 px-4">
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
-    </section>
-    <script src="index.js"></script>
-</body>
+
+    <footer class="ftco-footer ftco-section img">
+    	<div class="overlay"></div>
+      <div class="container">
+        <div class="row mb-5">
+          <div class="mb-5 mb-md-5">
+            <div class="ftco-footer-widget mb-4">
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon icon-phone"></span>
+<!--                    <span class="text">+2 392 3929 210</span>-->
+                </a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon icon-envelope"></span>
+<!--                    <span class="text">info@yourdomain.com</span>-->
+                </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
 
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+<!--  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>-->
+<!--  <script src="js/google-map.js"></script>-->
+  <script src="js/main.js"></script>
+
+  </body>
+</html>
