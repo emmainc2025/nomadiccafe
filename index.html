@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="lang-rs">
   	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="index.html">
@@ -39,9 +39,16 @@
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-	          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+	          <li class="nav-item active">
+                  <a href="index.html" class="nav-link" data-lang="en">Home</a>
+                  <a href="index.html" class="nav-link" data-lang="rs">Početna</a>
+              </li>
+	          <li class="nav-item">
+                  <a href="services.html" class="nav-link" data-lang="en">Services</a>
+                  <a href="services.html" class="nav-link" data-lang="rs">Ponuda</a>
+              </li>
+	          <li class="nav-item"><a href="#about" class="nav-link" data-lang="en">About</a></li>
+	          <li class="nav-item"><a href="#about" class="nav-link" data-lang="rs">O nama</a></li>
 <!--	          <li class="nav-item dropdown">-->
 <!--              <a class="nav-link dropdown-toggle" href="room.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>-->
 <!--              <div class="dropdown-menu" aria-labelledby="dropdown04">-->
@@ -51,7 +58,12 @@
 <!--                <a class="dropdown-item" href="checkout.html">Checkout</a>-->
 <!--              </div>-->
 <!--            	</li>-->
-	          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+	          <li class="nav-item"><a href="#contact" class="nav-link" data-lang="en">Contact</a></li>
+	          <li class="nav-item"><a href="#contact" class="nav-link" data-lang="rs">Kontakt</a></li>
+              <li class="lang-toggle">
+                <button onclick="setLang('rs')" id="btn-rs" class="active">RS</button>
+                <button onclick="setLang('en')" id="btn-en">EN</button>
+              </li>
 	        </ul>
 	      </div>
 		  </div>
@@ -65,10 +77,16 @@
           <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
             <div class="col-md-8 col-sm-12 text-center ftco-animate">
-            	<span class="subheading">Welcome</span>
-              <h1 class="mb-4">The Best Coffee Testing Experience</h1>
-              <p class="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              <p><a href="#contact" class="btn btn-primary p-3 px-xl-4 py-xl-3">Contact Us</a> <a href="services.html" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Services</a></p>
+                <span class="subheading" data-lang="rs">Dobrodošli</span>
+                <span class="subheading" data-lang="en">Welcome</span>
+              <h1 class="mb-4">Iz srca Sremskih Karlovaca, Nomadic café stize na vasu adresu</h1>
+              <p class="mb-4 mb-md-5">Tu smo da svaki vas event napravimo posebnim</p>
+              <p>
+                  <a href="#contact" class="btn btn-primary p-3 px-xl-4 py-xl-3" data-lang="en">Contact Us</a>
+                  <a href="#contact" class="btn btn-primary p-3 px-xl-4 py-xl-3" data-lang="rs">Kontaktirajte Nas</a>
+                  <a href="services.html" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3" data-lang="en">View Services</a>
+                  <a href="services.html" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3" data-lang="rs">Pogledete Ponudu</a>
+              </p>
             </div>
 
           </div>
@@ -81,12 +99,17 @@
           <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
             <div class="col-md-8 col-sm-12 text-center ftco-animate">
-            	<span class="subheading">Welcome</span>
-              <h1 class="mb-4">Amazing Taste &amp; Beautiful Place</h1>
-              <p class="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Contact Us</a> <a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Services</a></p>
+                <span class="subheading" data-lang="rs">Dobrodošli</span>
+                <span class="subheading" data-lang="en">Welcome</span>
+              <h1 class="mb-4">Profesionalna usluga I ljubav prema kafi</h1>
+              <p class="mb-4 mb-md-5">Za nas je kafa vise od pica, ona je poziv da usporis,osetis trenutak I uzivas u svakom gutljaju.</p>
+              <p>
+                <a href="#contact" class="btn btn-primary p-3 px-xl-4 py-xl-3" data-lang="en">Contact Us</a>
+                <a href="#contact" class="btn btn-primary p-3 px-xl-4 py-xl-3" data-lang="rs">Kontaktirajte Nas</a>
+                <a href="services.html" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3" data-lang="en">View Services</a>
+                <a href="services.html" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3" data-lang="rs">Pogledete Ponudu</a>
+              </p>
             </div>
-
           </div>
         </div>
       </div>
@@ -97,10 +120,17 @@
           <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
             <div class="col-md-8 col-sm-12 text-center ftco-animate">
-            	<span class="subheading">Welcome</span>
-              <h1 class="mb-4">Creamy Hot and Ready to Serve</h1>
-              <p class="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Contact Us</a> <a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Services</a></p>
+            	<span class="subheading" data-lang="rs">Dobrodošli</span>
+            	<span class="subheading" data-lang="en">Welcome</span>
+              <h1 class="mb-4">Mala stanica za veliki uzitak</h1>
+              <p class="mb-4 mb-md-5">Insirisan vintage dizajnom Nomadic café kombinuje ukus, miris, I vizuelni dozivljaj u savrsen
+                  paket.</p>
+              <p>
+                  <a href="#contact" class="btn btn-primary p-3 px-xl-4 py-xl-3" data-lang="en">Contact Us</a>
+                  <a href="#contact" class="btn btn-primary p-3 px-xl-4 py-xl-3" data-lang="rs">Kontaktirajte Nas</a>
+                  <a href="services.html" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3" data-lang="en">View Services</a>
+                  <a href="services.html" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3" data-lang="rs">Pogledete Ponudu</a>
+              </p>
 			</div>
 
           </div>
@@ -113,97 +143,104 @@
       <div class="one-half ftco-animate">
     	<div class="overlap">
 	      <div class="heading-section ftco-animate ">
-	       	<span class="subheading">Discover</span>
+	       	<span class="subheading lang-en" data-lang="en">Discover</span>
+	       	<span class="subheading lang-en" data-lang="rs">Discover</span>
 	        <h2 class="mb-4">Our Story</h2>
 	      </div>
-	      <div>
-	  		<p>In today’s fast-paced life, we believe people deserve a moment to slow down and truly enjoy
-               the taste of a well-made cup of coffee. Our coffee bike was created to bring that pause — a
-               small break from the rush — where quality and flavor come first. That is how our idea to start
-               this small business was created
+	      <div data-lang="en">
+	  		<p>After years of living a nomadic life across Europe, I returned to Serbia in 2024 to start this small
+                business and bring my dream to life — a mobile coffee cart that serves freshly brewed coffee
+                wherever people gather.
+            <p>Symbolically, I named it after both my past and my future: Nomadic.</p>
             </p>
             <p>
-              For us, coffee is not just a drink. It’s a moment of calm, connection, and enjoyment, served
-              wherever people gather.
+                My mission is simple: to turn ordinary moments into meaningful pauses.
+                In today’s fast-paced life, people deserve a moment to slow down and truly enjoy the taste of a
+                well-made cup of coffee.
             </p>
 	  	  </div>
+          <div data-lang="rs">
+            <p>
+                Posle vise godina nomadskog života širom Evrope, odlucio sam da se 2024. godine vratim u
+                Srbiju kako bih pokrenuo ovaj mali biznis i ostvario svoj san — mobilni coffee shop koji služi
+                sveže pripremljenu kafu gde god se ljudi okupljaju.
+            </p>
+            <p>
+                Simbolično sam ga nazvao po svojoj prošlosti i svojoj budućnosti - Nomadic.
+            </p>
+            <p>
+                Moja misija je jednostavna: da obične trenutke pretvorim u značajne pauze.
+                U današnjem brzom načinu života, ljudi zaslužuju trenutak gde će da uspore i istinski uživaju u
+                ukusu kvalitetne i pažljivo pripremljene kafe.
+            </p>
+          </div>
   		</div>
       </div>
     </section>
 
     <section class="ftco-section ftco-services">
         <div class="container">
+            <div class="row justify-content-center mb-5 pb-3">
+              <div class="col-md-7 heading-section ftco-animate text-center">
+                  <span class="subheading lang-en" style="color: white;" data-lang="en">Our</span>
+                  <span class="subheading lang-rs" style="color: white;" data-lang="rs">Naše</span>
+                  <h2 data-lang="en">Services</h2>
+                  <h2 data-lang="rs">Usluge</h2>
+              </div>
+            </div>
             <div class="row">
                 <div class="col-md-4 ftco-animate">
                     <div class="media d-block text-center block-6 services">
                         <div class="icon d-flex justify-content-center align-items-center mb-5">
-                            <img src="shared/party.svg">
+                            <img src="shared/undraw_partying_3qad.svg">
                         </div>
                         <div class="media-body">
-                            <h3 class="heading">Private Events</h3>
-                            <p>Mobile coffee catering for private events, parties, and celebrations, serving specialty coffee
-                                anywhere.
-                            </p>
+                            <h3 class="heading" data-lang="en">Private Events & Parties</h3>
+                            <h3 class="heading" data-lang="rs">Privatni događaji i proslave</h3>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 ftco-animate">
                     <div class="media d-block text-center block-6 services">
                         <div class="icon d-flex justify-content-center align-items-center mb-5">
-                            <img src="shared/heart.svg">
+                            <img src="shared/undraw_wedding_qt3q.svg">
                         </div>
                         <div class="media-body">
-                            <h3 class="heading">Weddings</h3>
-                            <p>Wedding coffee catering with a stylish coffee bike, offering premium espresso drinks for guests.</p>
+                            <h3 class="heading" data-lang="en">Weddings</h3>
+                            <h3 class="heading" data-lang="rs">Venčanja</h3>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 ftco-animate">
                     <div class="media d-block text-center block-6 services">
                         <div class="icon d-flex justify-content-center align-items-center mb-5">
-                            <img src="shared/sun.svg">
+                            <img src="shared/undraw_moving_2cfm.svg">
                         </div>
                         <div class="media-body">
-                            <h3 class="heading">Festivals and Markets</h3>
-                            <p>Coffee bike service for festivals and markets, delivering fast, high-quality specialty coffee.</p>
+                            <h3 class="heading" data-lang="en">Festivals and Markets</h3>
+                            <h3 class="heading" data-lang="rs">Festivali i marketi</h3>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 ftco-animate">
                     <div class="media d-block text-center block-6 services">
                         <div class="icon d-flex justify-content-center align-items-center mb-5">
-                            <img src="shared/globe.svg">
+                            <img src="shared/undraw_conversation_15p8.svg">
                         </div>
                         <div class="media-body">
-                            <h3 class="heading">Corporate</h3>
-                            <p>Corporate coffee catering with a mobile coffee bar for meetings, launches, and company
-                                events.
-                            </p>
+                            <h3 class="heading" data-lang="en">Corporate Coffee Catering</h3>
+                            <h3 class="heading" data-lang="rs">Korporativni coffee ketering</h3>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 ftco-animate">
                     <div class="media d-block text-center block-6 services">
                         <div class="icon d-flex justify-content-center align-items-center mb-5">
-                            <img src="shared/structure.svg">
+                            <img src="shared/undraw_having-fun_kkeu.svg">
                         </div>
                         <div class="media-body">
-                            <h3 class="heading">Team Buildings</h3>
-                            <p>Coffee catering for team building events, creating relaxed moments with great coffee.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 ftco-animate">
-                    <div class="media d-block text-center block-6 services">
-                        <div class="icon d-flex justify-content-center align-items-center mb-5">
-                            <img src="shared/rocket.svg">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="heading">Brand Activities and Pop-Ups</h3>
-                            <p>
-                              Mobile coffee bike for brand activations and pop-ups, combining specialty coffee with visual impact to attract and engage customers.
-                            </p>
+                            <h3 class="heading" data-lang="en">Team Buildings</h3>
+                            <h3 class="heading" data-lang="rs">Team building događaji</h3>
                         </div>
                     </div>
                 </div>
@@ -214,11 +251,13 @@
     <section class="ftco-section">
     	<div class="container">
     		<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section ftco-animate text-center">
-          	<span class="subheading">Discover</span>
-            <h2 class="mb-4">Our Past Events</h2>
-          </div>
-        </div>
+                <div class="col-md-7 heading-section ftco-animate text-center">
+                  <span class="subheading" data-lang="en">Discover</span>
+                  <span class="subheading" data-lang="rs">Pogledajte</span>
+                  <h2 class="mb-4" data-lang="en">Our Past Events</h2>
+                  <h2 class="mb-4" data-lang="rs">Naše Prethodne Dogadjaje</h2>
+                </div>
+            </div>
         <div class="row">
         	<div class="col-md-4">
         		<div class="menu-entry">
@@ -515,25 +554,36 @@
                 <div class="row no-gutters d-md-flex align-items-center">
                     <div class="col-md-6 d-flex align-self-stretch">
                         <div id="map">
-                            <iframe class="cs-picture" src="https://maps.google.com/maps?q=45.202899, 19.933983&z=15&output=embed" style="border:0; width: 100%; height: 100%;"></iframe>
+                            <iframe class="cs-picture" src="https://maps.google.com/maps?q=45.202899, 19.933983&z=15&output=embed" style="border:0; width: 100%; height: 100%; margin-top: 1.5em;"></iframe>
                         </div>
                     </div>
                     <div class="col-md-6 appointment ftco-animate">
-                        <h3 class="mb-3">Contact Us</h3>
-                        <form action="#" class="appointment-form">
+                        <h3 class="mb-3" data-lang="en">Contact Us</h3>
+                        <h3 class="mb-3" data-lang="rs">Kontaktirajte Nas</h3>
+                        <form action="https://formspree.io/f/mzdjdwzg" method="POST" class="appointment-form">
                             <div class="d-md-flex">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="First Name">
+                                    <input type="text" name="first_name" class="form-control" data-lang="en" placeholder="First Name">
+                                    <input type="text" name="first_name" class="form-control" data-lang="rs" placeholder="Ime">
                                 </div>
                                 <div class="form-group ml-md-4">
-                                    <input type="text" class="form-control" placeholder="Last Name">
+                                    <input type="text" name="last_name" class="form-control" data-lang="en" placeholder="Last Name">
+                                    <input type="text" name="last_name" class="form-control" data-lang="rs" placeholder="Prezime">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <textarea name="" id="" cols="30" rows="4" class="form-control" placeholder="Message"></textarea>
+                                <input type="email" name="email" class="form-control" placeholder="Email">
                             </div>
+                            <input type="text" name="_gotcha" style="display:none" />
                             <div class="form-group">
-                                <input type="submit" value="Send" class="btn btn-primary py-3 px-4">
+                                <textarea name="message" cols="30" rows="4" class="form-control" data-lang="en" placeholder="Message"></textarea>
+                                <textarea name="message" cols="30" rows="4" class="form-control" data-lang="rs" placeholder="Poruka"></textarea>
+                            </div>
+                            <div class="form-group lang-en" data-lang="en">
+                                <input type="submit" value="Send" class="btn btn-white py-3 px-4">
+                            </div>
+                            <div class="form-group lang-en" data-lang="rs">
+                                <input type="submit" value="Pošalji" class="btn btn-white py-3 px-4">
                             </div>
                         </form>
                     </div>
@@ -545,26 +595,34 @@
     	<div class="overlay"></div>
       <div class="container">
         <div class="row mb-5">
-          <div class="mb-5 mb-md-5">
-            <div class="ftco-footer-widget mb-4">
-              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon icon-phone"></span>
-<!--                    <span class="text">+2 392 3929 210</span>-->
-                </a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon icon-envelope"></span>
-<!--                    <span class="text">info@yourdomain.com</span>-->
-                </a></li>
-              </ul>
-            </div>
+          <div>
+              <div class="ftco-footer-widget mb-4 mt-5">
+                  <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                      <li class="ftco-animate">
+                          <a href="https://www.instagram.com/nomadic_cafe_serbia/" target="_blank" rel="noopener">
+                              <span class="icon-instagram"></span>
+                          </a>
+                      </li>
+                      <li class="ftco-animate">
+                          <a href="tel:+38166958610">
+                              <span class="icon icon-phone"></span>
+                          </a>
+                          <span style="color: white;">+381 66 958 6100</span>
+                      </li>
+                      <li class="ftco-animate">
+                          <a href="mailto:nomadic.cafe@outlook.com">
+                              <span class="icon icon-envelope"></span>
+                          </a>
+                          <span style="color: white;">nomadic.cafe@outlook.com</span>
+                      </li>
+                  </ul>
+              </div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12 text-center">
 
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            <p style="font-size: 9px;"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
   Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
@@ -595,6 +653,15 @@
 <!--  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>-->
 <!--  <script src="js/google-map.js"></script>-->
   <script src="js/main.js"></script>
+  <script>
+    function setLang(lang) {
+      document.body.className = 'lang-' + lang;
 
+      document.querySelectorAll('.lang-toggle button').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      document.getElementById('btn-' + lang).classList.add('active');
+    }
+    </script>
   </body>
 </html>
