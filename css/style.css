@@ -487,7 +487,13 @@ pre {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-right: -15px;
-  margin-left: -15px; }
+  margin-left: -15px;
+}
+
+.row-services {
+  justify-content: center;
+}
+
 
 .no-gutters {
   margin-right: 0;
@@ -3336,9 +3342,11 @@ input[type="button"].btn-block {
 .lang-en [data-lang="en"],
 .lang-rs [data-lang="rs"] { display: inline; }
 
-.subheading[data-lang] { display: none; }
+.subheading[data-lang], heading[data-lang] { display: none; }
 .lang-en .subheading[data-lang="en"],
-.lang-rs .subheading[data-lang="rs"] { display: block; }
+.lang-rs .subheading[data-lang="rs"],
+.lang-rs .heading[data-lang="rs"],
+.lang-en .heading[data-lang="en"] { display: block; }
 
 .form-group[data-lang] { display: none !important; }
 .lang-en .form-group[data-lang="en"],
@@ -7850,8 +7858,8 @@ h1, h2, h3, h4, h5,
   }
     @media (max-width: 767.98px) {
       .ftco-about .one-half.img {
-        height: 300px;
-        width: 70%;
+        height: 500px;
+        width: 60%;
         margin: 6% 12% 6% 20%;
       } }
   @media (min-width: 768px) {

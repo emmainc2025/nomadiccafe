@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="lang-rs">
   	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="index.html">
@@ -39,10 +39,23 @@
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-	          <li class="nav-item active"><a href="services.html" class="nav-link">Services</a></li>
+	          <li class="nav-item">
+                <a href="index.html" class="nav-link" data-lang="en">Home</a>
+                <a href="index.html" class="nav-link" data-lang="rs">Početna</a>
+              </li>
+	          <li class="nav-item active">
+                <a href="services.html" class="nav-link" data-lang="en">Services</a>
+                <a href="services.html" class="nav-link" data-lang="rs">Ponuda</a>
+              </li>
             </li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	          <li class="nav-item">
+                <a href="index.html#contact" class="nav-link" data-lang="en">Contact</a>
+                <a href="index.html#contact" class="nav-link" data-lang="rs">Kontakt</a>
+              </li>
+              <li class="lang-toggle">
+                <button onclick="setLang('rs')" id="btn-rs" class="active">RS</button>
+                <button onclick="setLang('en')" id="btn-en">EN</button>
+              </li>
 	        </ul>
 	      </div>
 		  </div>
@@ -57,10 +70,10 @@
           <div class="row slider-text justify-content-center align-items-center">
 
             <div class="col-md-7 col-sm-12 text-center ftco-animate">
-            	<h1 class="mb-3 mt-5 bread">Services</h1>
-	            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Services</span></p>
+            	<h1 class="mb-3 mt-5 bread" data-lang="en">Services</h1>
+            	<h1 class="mb-3 mt-5 bread" data-lang="rs">Ponuda</h1>
+<!--	            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span></p>-->
             </div>
-
           </div>
         </div>
       </div>
@@ -68,55 +81,41 @@
 
     <section class="ftco-section ftco-services">
       <div class="container">
-        <div class="row">
+        <div class="row row-services">
           <div class="col-md-4 ftco-animate">
             <div class="media d-block text-center block-6 services">
               <div class="icon d-flex justify-content-center align-items-center mb-5">
-                <span class="flaticon-choices"></span>
+                <img src="shared/undraw_partying_3qad.svg">
               </div>
               <div class="media-body">
-                <h3 class="heading">Private Events</h3>
-                <p>From birthdays to garden parties and family celebrations, our mobile coffee bar includes full
+                <h3 class="heading lang-en" data-lang="en">Private Events & Parties</h3>
+                <h3 class="heading lang-rs" data-lang="rs">Privatni događaji i proslave</h3>
+                <p data-lang="en">From birthdays to garden parties and family celebrations, our mobile coffee bar includes full
                   setup, professional service, and freshly brewed espresso drinks your guests will love — without
                   you worrying about logistics.</p>
+                <p data-lang="rs">Od rođendana do žurki i porodičnih slavlja, naš pokretni kafe bar uključuje kompletnu
+                  postavku opreme, profesionalnu uslugu i sveže pripremljene espresso napitke koje će vaši
+                  gosti obožavati — bez vaše brige o logistici.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 ftco-animate">
             <div class="media d-block text-center block-6 services">
               <div class="icon d-flex justify-content-center align-items-center mb-5">
-                <span class="flaticon-delivery-truck"></span>
+                <img src="shared/undraw_wedding_qt3q.svg">
               </div>
               <div class="media-body">
-                <h3 class="heading">Weddings</h3>
-                <p>Your wedding day deserves exceptional coffee. Our coffee shop on wheels is a stylish and
+                <h3 class="heading lang-en" data-lang="en">Weddings</h3>
+                <h3 class="heading lang-rs" data-lang="rs">Venčanja</h3>
+                <p data-lang="en">Your wedding day deserves exceptional coffee. Our coffee shop on wheels is a stylish and
                   memorable addition. Professional barista service will serve freshly brewed coffee drinks for
                   your guests during the reception, cocktail hour, or late-night celebrations. A perfect way to
                   keep everyone happy and energized.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="media d-block text-center block-6 services">
-              <div class="icon d-flex justify-content-center align-items-center mb-5">
-                <span class="flaticon-coffee-bean"></span></div>
-              <div class="media-body">
-                <h3 class="heading">Festivals and Markets</h3>
-                <p>Fast service, high quality, and great energy — our coffee shop on wheels is made for festivals
-                  and markets. We handle busy crowds with ease, creating a standout experience for visitors.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="media d-block text-center block-6 services">
-              <div class="icon d-flex justify-content-center align-items-center mb-5">
-                <span class="flaticon-coffee-bean"></span>
-              </div>
-              <div class="media-body">
-                <h3 class="heading">Corporate Coffee Catering</h3>
-                <p>From conferences to office celebrations, we provide professional coffee catering creating a
-                  relaxed space where clients, colleagues, and guests can connect over great coffee. We combine
-                  fast service with high-quality drinks — ideal for both small teams and large groups.
+                <p data-lang="rs">
+                  Vaš poseban dan zaslužuje izuzetnu kafu. Naš coffee shop na točkovima je elegantan i
+                  upečatljiv dodatak svakom venčanju. Nasa profesionalna usluga ce pripremiti sveže napitke
+                  od kafe za vaše goste tokom celog dana slavlja. Savršen način da svi naprave mali predah,
+                  uživaju u dobroj kafi i napune baterije.
                 </p>
               </div>
             </div>
@@ -124,12 +123,53 @@
           <div class="col-md-4 ftco-animate">
             <div class="media d-block text-center block-6 services">
               <div class="icon d-flex justify-content-center align-items-center mb-5">
-                <span class="flaticon-coffee-bean"></span>
+                <img src="shared/undraw_moving_2cfm.svg">
               </div>
               <div class="media-body">
-                <h3 class="heading">Team Buildings</h3>
-                <p>Coffee brings people together. Our mobile coffee shop is a great addition to team-building
+                <h3 class="heading lang-en" data-lang="en">Festivals and Markets</h3>
+                <h3 class="heading lang-rs" data-lang="rs">Festivali i marketi</h3>
+                <p data-lang="en">Fast service, high quality, and great energy — our coffee shop on wheels is made for festivals
+                  and markets. We handle busy crowds with ease, creating a standout experience for visitors.</p>
+                <p data-lang="rs">Brza usluga, visok kvalitet— naš kafe-bicikl je stvoren za festivale i markete. Sa lakoćom se
+                  nosimo sa velikim gužvama i stvaramo posebno iskustvo za posetioce.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="media d-block text-center block-6 services">
+              <div class="icon d-flex justify-content-center align-items-center mb-5">
+                <img src="shared/undraw_conversation_15p8.svg">
+              </div>
+              <div class="media-body">
+                <h3 class="heading lang-en" data-lang="en">Corporate Coffee Catering</h3>
+                <h3 class="heading lang-rs" data-lang="rs">Korporativni coffee ketering</h3>
+                <p data-lang="en">From conferences to office celebrations, we provide professional coffee catering creating a
+                  relaxed space where clients, colleagues, and guests can connect over great coffee. We combine
+                  fast service with high-quality drinks — ideal for both small teams and large groups.
+                </p>
+                <p data-lang="rs">
+                  Od konferencija do proslava u kancelariji, pružamo profesionalni ketering stvarajući opušten
+                  ambijent gde klijenti, kolege i gosti mogu da se povežu i opuste uz vrhunsku kafu.
+                  Kombinacija brze usluge i visokog kvalitet napitaka nas čini pogodnim kako za male timove
+                  tako i za velike grupe.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="media d-block text-center block-6 services">
+              <div class="icon d-flex justify-content-center align-items-center mb-5">
+                <img src="shared/undraw_having-fun_kkeu.svg">
+              </div>
+              <div class="media-body">
+                <h3 class="heading lang-en" data-lang="en">Team Buildings</h3>
+                <h3 class="heading lang-en" data-lang="rs">Team building događaji</h3>
+                <p data-lang="en">Coffee brings people together. Our mobile coffee shop is a great addition to team-building
                   events, encouraging conversation, connection, and relaxed moments between activities.
+                </p>
+                <p data-lang="rs">
+                  Kafa spaja ljude. Naš mobilni coffee shop je sjajan dodatak team building događajima,
+                  podstiče razgovor, povezivanje i opuštene trenutke između aktivnosti.
                 </p>
               </div>
             </div>
@@ -141,14 +181,14 @@
     <footer class="ftco-footer ftco-section img">
     	<div class="overlay"></div>
       <div class="container">
-        <div class="row mb-5">
-          <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
+        <div class="row mb-5 mt-5">
+          <div class="col-lg-3 col-md-6 mb-5 mt-5 mb-md-5">
             <div class="ftco-footer-widget mb-4">
             	<h2 class="ftco-heading-2">Have a Questions?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+	                <li><a href="tel:+38166958610"><span class="icon icon-phone"></span><span class="text">+381 66 958 6100</span></a></li>
+	                <li><a href="mailto:nomadic.cafe@outlook.com"><span class="icon icon-envelope"></span><span class="text">nomadic.cafe@outlook.com</span></a></li>
 	              </ul>
 	            </div>
             </div>
@@ -157,7 +197,7 @@
         <div class="row">
           <div class="col-md-12 text-center">
 
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            <p style="font-size: 9px;"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
   Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
@@ -188,6 +228,15 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+    <script>
+      function setLang(lang) {
+        document.body.className = 'lang-' + lang;
 
+        document.querySelectorAll('.lang-toggle button').forEach(btn => {
+          btn.classList.remove('active');
+        });
+        document.getElementById('btn-' + lang).classList.add('active');
+      }
+    </script>
   </body>
 </html>

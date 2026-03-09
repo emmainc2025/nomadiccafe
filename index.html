@@ -58,8 +58,10 @@
 <!--                <a class="dropdown-item" href="checkout.html">Checkout</a>-->
 <!--              </div>-->
 <!--            	</li>-->
-	          <li class="nav-item"><a href="#contact" class="nav-link" data-lang="en">Contact</a></li>
-	          <li class="nav-item"><a href="#contact" class="nav-link" data-lang="rs">Kontakt</a></li>
+	          <li class="nav-item">
+                  <a href="#contact" class="nav-link" data-lang="en">Contact</a>
+                  <a href="#contact" class="nav-link" data-lang="rs">Kontakt</a>
+              </li>
               <li class="lang-toggle">
                 <button onclick="setLang('rs')" id="btn-rs" class="active">RS</button>
                 <button onclick="setLang('en')" id="btn-en">EN</button>
@@ -188,7 +190,7 @@
                   <h2 data-lang="rs">Usluge</h2>
               </div>
             </div>
-            <div class="row">
+            <div class="row row-services">
                 <div class="col-md-4 ftco-animate">
                     <div class="media d-block text-center block-6 services">
                         <div class="icon d-flex justify-content-center align-items-center mb-5">
@@ -662,6 +664,37 @@
       });
       document.getElementById('btn-' + lang).classList.add('active');
     }
+    </script>
+    <script>
+        const form = document.querySelector('.appointment-form');
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault(); // stops the redirect
+
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            });
+
+            const isRS = document.body.classList.contains('lang-rs');
+            if (response.ok) {
+                form.reset();
+
+                // Change button text based on active language
+                const submitBtns = form.querySelectorAll('input[type="submit"]');
+                submitBtns.forEach(btn => {
+                    btn.value = isRS ? '✓ Poslato!' : '✓ Sent!';
+                    btn.disabled = true;
+                });
+
+            } else {
+                const submitBtns = form.querySelectorAll('input[type="submit"]');
+                submitBtns.forEach(btn => {
+                    btn.value = isRS ? 'Greška, pokušajte ponovo' : 'Error, please try again';
+                });
+            }
+        });
     </script>
   </body>
 </html>
