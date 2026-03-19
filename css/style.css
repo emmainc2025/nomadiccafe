@@ -7566,7 +7566,10 @@ h1, h2, h3, h4, h5,
     letter-spacing: 5px; }
 
 .owl-carousel {
-  position: relative; }
+  position: relative;
+  touch-action: pan-y;
+  overflow-x: auto;
+}
   .owl-carousel .owl-item {
     opacity: .4; }
     .owl-carousel .owl-item.active {
