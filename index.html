@@ -701,6 +701,27 @@
                 });
             }
         });
+
+        $('.home-slider').on('touchstart', function(e) {
+            this._startX = e.originalEvent.touches[0].clientX;
+            this._startY = e.originalEvent.touches[0].clientY;
+        });
+
+        $('.home-slider').on('touchmove', function(e) {
+            var deltaX = Math.abs(e.originalEvent.touches[0].clientX - this._startX);
+            var deltaY = Math.abs(e.originalEvent.touches[0].clientY - this._startY);
+
+            if (deltaY > deltaX) {
+                e.stopPropagation(); // vertical swipe — don't let owl eat it
+            }
+        });
+
+        $('.home-slider').owlCarousel({
+            // ... your existing options ...
+            touchDrag: true,
+            mouseDrag: true,
+            pullDrag: false,   // prevents accidental drags interfering with scroll
+        });
     </script>
   </body>
 </html>
