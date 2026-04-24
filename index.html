@@ -695,26 +695,24 @@
             }
         });
 
-        $('.home-slider').on('touchstart', function(e) {
-            this._startX = e.originalEvent.touches[0].clientX;
-            this._startY = e.originalEvent.touches[0].clientY;
-        });
+        var slider = document.querySelector('.home-slider');
+        var startX, startY;
 
-        $('.home-slider').on('touchmove', function(e) {
-            var deltaX = Math.abs(e.originalEvent.touches[0].clientX - this._startX);
-            var deltaY = Math.abs(e.originalEvent.touches[0].clientY - this._startY);
+        slider.addEventListener('touchstart', function(e) {
+            startX = e.touches[0].clientX;
+            startY = e.touches[0].clientY;
+        }, { passive: true });
+
+        slider.addEventListener('touchmove', function(e) {
+            var deltaX = Math.abs(e.touches[0].clientX - startX);
+            var deltaY = Math.abs(e.touches[0].clientY - startY);
 
             if (deltaY > deltaX) {
-                e.stopPropagation(); // vertical swipe — don't let owl eat it
+                // Force the page to scroll manually
+                window.scrollBy(0, -(e.touches[0].clientY - startY));
+                startY = e.touches[0].clientY; // update so it doesn't jump
             }
-        });
-
-        $('.home-slider').owlCarousel({
-            // ... your existing options ...
-            touchDrag: true,
-            mouseDrag: true,
-            pullDrag: false,   // prevents accidental drags interfering with scroll
-        });
+        }, { passive: true });
     </script>
   </body>
 </html>
