@@ -701,6 +701,25 @@
                 });
             }
         });
+
+        var slider = document.querySelector('.home-slider');
+        var startX, startY;
+
+        slider.addEventListener('touchstart', function(e) {
+            startX = e.touches[0].clientX;
+            startY = e.touches[0].clientY;
+        }, { passive: true });
+
+        slider.addEventListener('touchmove', function(e) {
+            var deltaX = Math.abs(e.touches[0].clientX - startX);
+            var deltaY = Math.abs(e.touches[0].clientY - startY);
+
+            if (deltaY > deltaX) {
+                // Force the page to scroll manually
+                window.scrollBy(0, -(e.touches[0].clientY - startY));
+                startY = e.touches[0].clientY; // update so it doesn't jump
+            }
+        }, { passive: true });
     </script>
   </body>
 </html>
